@@ -12,6 +12,7 @@
 		F19F55B229A0F2D600A098B3 /* EssentiaFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F55B129A0F2D600A098B3 /* EssentiaFeedTests.swift */; };
 		F19F55B329A0F2D600A098B3 /* EssentiaFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = F19F55A529A0F2D500A098B3 /* EssentiaFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F19F55BD29A0F2EE00A098B3 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F55BC29A0F2EE00A098B3 /* FeedItem.swift */; };
+		F19F55BF29A0F3B700A098B3 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F55BE29A0F3B700A098B3 /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		F19F55AC29A0F2D600A098B3 /* EssentiaFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentiaFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19F55B129A0F2D600A098B3 /* EssentiaFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentiaFeedTests.swift; sourceTree = "<group>"; };
 		F19F55BC29A0F2EE00A098B3 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		F19F55BE29A0F3B700A098B3 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,7 @@
 		F19F55A429A0F2D500A098B3 /* EssentiaFeed */ = {
 			isa = PBXGroup;
 			children = (
-				F19F55BC29A0F2EE00A098B3 /* FeedItem.swift */,
+				F19F55C029A0F4AC00A098B3 /* Feed Feature */,
 				F19F55A529A0F2D500A098B3 /* EssentiaFeed.h */,
 				F19F55A629A0F2D500A098B3 /* EssentiaFeed.docc */,
 			);
@@ -86,6 +88,15 @@
 				F19F55B129A0F2D600A098B3 /* EssentiaFeedTests.swift */,
 			);
 			path = EssentiaFeedTests;
+			sourceTree = "<group>";
+		};
+		F19F55C029A0F4AC00A098B3 /* Feed Feature */ = {
+			isa = PBXGroup;
+			children = (
+				F19F55BC29A0F2EE00A098B3 /* FeedItem.swift */,
+				F19F55BE29A0F3B700A098B3 /* FeedLoader.swift */,
+			);
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19F55BF29A0F3B700A098B3 /* FeedLoader.swift in Sources */,
 				F19F55BD29A0F2EE00A098B3 /* FeedItem.swift in Sources */,
 				F19F55A729A0F2D500A098B3 /* EssentiaFeed.docc in Sources */,
 			);
