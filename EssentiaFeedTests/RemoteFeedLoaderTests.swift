@@ -42,13 +42,27 @@ class RemoteFeedLoaderTests: XCTestCase {
         XCTAssertEqual(client.requestedURL, url)
     }
     
+    func test_loadTwice_requestsDataTwiceFromURL() {
+        let url = URL(string: "https://a-given-url.com")!
+        let (sut, client) = makeSUT(url: url)
+        
+        sut.load()
+        sut.load()
+        
+        XCTAssertEqual(client.requestedURLs, [url, url])
+        XCTAssertEqual(client.requestedURL, url)
+
+    }
+    
     //MARK: - Helpers
     
     private class HTTPClientSpy: HTTPClient {
         var requestedURL: URL?
+        var requestedURLs: [URL] = [URL]()
 
         func get(from url: URL) {
             requestedURL = url
+            requestedURLs.append(url)
         }
     }
     
