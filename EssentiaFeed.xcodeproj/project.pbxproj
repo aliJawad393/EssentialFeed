@@ -14,6 +14,7 @@
 		F19F55BD29A0F2EE00A098B3 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F55BC29A0F2EE00A098B3 /* FeedItem.swift */; };
 		F19F55BF29A0F3B700A098B3 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F55BE29A0F3B700A098B3 /* FeedLoader.swift */; };
 		F19F55C229A4825200A098B3 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F55C129A4825200A098B3 /* RemoteFeedLoaderTests.swift */; };
+		F1E3990F29A73C060089FDDE /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E3990E29A73C060089FDDE /* RemoteFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		F19F55BC29A0F2EE00A098B3 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		F19F55BE29A0F3B700A098B3 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		F19F55C129A4825200A098B3 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
+		F1E3990E29A73C060089FDDE /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,17 @@
 			children = (
 				F19F55BC29A0F2EE00A098B3 /* FeedItem.swift */,
 				F19F55BE29A0F3B700A098B3 /* FeedLoader.swift */,
+				F1E3990D29A73BF30089FDDE /* Feed API */,
 			);
 			path = "Feed Feature";
+			sourceTree = "<group>";
+		};
+		F1E3990D29A73BF30089FDDE /* Feed API */ = {
+			isa = PBXGroup;
+			children = (
+				F1E3990E29A73C060089FDDE /* RemoteFeedLoader.swift */,
+			);
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E3990F29A73C060089FDDE /* RemoteFeedLoader.swift in Sources */,
 				F19F55BF29A0F3B700A098B3 /* FeedLoader.swift in Sources */,
 				F19F55BD29A0F2EE00A098B3 /* FeedItem.swift in Sources */,
 				F19F55A729A0F2D500A098B3 /* EssentiaFeed.docc in Sources */,
