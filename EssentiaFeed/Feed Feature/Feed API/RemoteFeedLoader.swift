@@ -8,7 +8,7 @@
 import Foundation
 
 public enum HTTPClientResponse {
-    case succes(HTTPURLResponse)
+    case succes(Data, HTTPURLResponse)
     case failure(Error)
 }
 
