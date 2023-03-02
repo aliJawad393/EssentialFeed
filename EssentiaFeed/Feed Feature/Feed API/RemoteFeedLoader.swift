@@ -52,7 +52,7 @@ public final class RemoteFeedLoader {
         }
     }
 }
-
+ 
 private class FeedItemsMapper {
     
     private struct Root: Decodable {
