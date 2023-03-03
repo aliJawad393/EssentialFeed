@@ -93,8 +93,8 @@
 		F19F55B029A0F2D600A098B3 /* EssentiaFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				F1C8027C29B209CF00B2CD41 /* Feed API */,
 				F19F55B129A0F2D600A098B3 /* EssentiaFeedTests.swift */,
-				F19F55C129A4825200A098B3 /* RemoteFeedLoaderTests.swift */,
 			);
 			path = EssentiaFeedTests;
 			sourceTree = "<group>";
@@ -107,6 +107,14 @@
 				F1E3990D29A73BF30089FDDE /* Feed API */,
 			);
 			path = "Feed Feature";
+			sourceTree = "<group>";
+		};
+		F1C8027C29B209CF00B2CD41 /* Feed API */ = {
+			isa = PBXGroup;
+			children = (
+				F19F55C129A4825200A098B3 /* RemoteFeedLoaderTests.swift */,
+			);
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 		F1E3990D29A73BF30089FDDE /* Feed API */ = {
