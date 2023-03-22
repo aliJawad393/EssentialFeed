@@ -42,7 +42,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
     
     }
 
-    func test_getFromURL_p erfromsGETRequestWithURL() {
+    func test_getFromURL_perfromsGETRequestWithURL() {
         let url = anyURL()
         let exp = expectation(description: "Wait for request")
         URLProtocolStub.observeRequest { request in
