@@ -19,9 +19,11 @@ class URLSessionHttpClient {
     struct UnexpectedValuesRepresentation: Error {}
     
     func get(from url: URL, completion: @escaping (HTTPClientResponse) -> Void) {
-        session.dataTask(with: url) {_, _, error in
+        session.dataTask(with: url) {data, response, error in
             if let error = error {
                 completion(.failure(error))
+            } else if let data = data, data.count > 0, let response = response as? HTTPURLResponse {
+                completion(.succes(data, response))
             } else {
                 completion(.failure(UnexpectedValuesRepresentation()))
             }
@@ -84,7 +86,8 @@ final class URLSessionHTTPClientTests: XCTestCase {
             switch result {
             case .succes(let receivedData, let receivedResponse):
                 XCTAssertEqual(receivedData, data)
-                XCTAssertEqual(receivedResponse, response)
+                XCTAssertEqual(receivedResponse.url, response.url)
+                XCTAssertEqual(receivedResponse.statusCode, response.statusCode)
             default:
                 XCTFail("Expected success, got \(result) instead")
             }
@@ -128,7 +131,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
     }
     
     private func anyData() -> Data {
-        Data()
+        Data("any data".utf8)
     }
     
     private func anyNSError() -> NSError {
