@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F107B14529C782E60038D95C /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107B14429C782E60038D95C /* XCTestCase+MemoryLeakTracking.swift */; };
 		F156184E29BECCC6000714B1 /* URLSessionHTTPClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156184D29BECCC6000714B1 /* URLSessionHTTPClientTest.swift */; };
+		F18D232329CCE00A00E796B0 /* URLSessionHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18D232229CCE00A00E796B0 /* URLSessionHttpClient.swift */; };
 		F19F55A729A0F2D500A098B3 /* EssentiaFeed.docc in Sources */ = {isa = PBXBuildFile; fileRef = F19F55A629A0F2D500A098B3 /* EssentiaFeed.docc */; };
 		F19F55AD29A0F2D600A098B3 /* EssentiaFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19F55A229A0F2D500A098B3 /* EssentiaFeed.framework */; };
 		F19F55B229A0F2D600A098B3 /* EssentiaFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F55B129A0F2D600A098B3 /* EssentiaFeedTests.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		F107B14429C782E60038D95C /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		F156184D29BECCC6000714B1 /* URLSessionHTTPClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTest.swift; sourceTree = "<group>"; };
+		F18D232229CCE00A00E796B0 /* URLSessionHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHttpClient.swift; sourceTree = "<group>"; };
 		F19F55A229A0F2D500A098B3 /* EssentiaFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentiaFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19F55A529A0F2D500A098B3 /* EssentiaFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentiaFeed.h; sourceTree = "<group>"; };
 		F19F55A629A0F2D500A098B3 /* EssentiaFeed.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentiaFeed.docc; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F19F55C029A0F4AC00A098B3 /* Feed Feature */,
+				F1E3990D29A73BF30089FDDE /* Feed API */,
 				F19F55A529A0F2D500A098B3 /* EssentiaFeed.h */,
 				F19F55A629A0F2D500A098B3 /* EssentiaFeed.docc */,
 			);
@@ -117,7 +120,6 @@
 			children = (
 				F19F55BC29A0F2EE00A098B3 /* FeedItem.swift */,
 				F19F55BE29A0F3B700A098B3 /* FeedLoader.swift */,
-				F1E3990D29A73BF30089FDDE /* Feed API */,
 			);
 			path = "Feed Feature";
 			sourceTree = "<group>";
@@ -137,6 +139,7 @@
 				F1E3990E29A73C060089FDDE /* RemoteFeedLoader.swift */,
 				F1C8027829B1ECF700B2CD41 /* HTTPClient.swift */,
 				F1C8027A29B1ED8400B2CD41 /* FeedItemsMapper.swift */,
+				F18D232229CCE00A00E796B0 /* URLSessionHttpClient.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				F1E3990F29A73C060089FDDE /* RemoteFeedLoader.swift in Sources */,
 				F1C8027929B1ECF700B2CD41 /* HTTPClient.swift in Sources */,
 				F19F55BF29A0F3B700A098B3 /* FeedLoader.swift in Sources */,
+				F18D232329CCE00A00E796B0 /* URLSessionHttpClient.swift in Sources */,
 				F1C8027B29B1ED8400B2CD41 /* FeedItemsMapper.swift in Sources */,
 				F19F55BD29A0F2EE00A098B3 /* FeedItem.swift in Sources */,
 				F19F55A729A0F2D500A098B3 /* EssentiaFeed.docc in Sources */,
