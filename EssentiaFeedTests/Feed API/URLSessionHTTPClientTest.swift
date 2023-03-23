@@ -9,7 +9,7 @@ import Foundation
 import XCTest
 import EssentiaFeed
 
-class URLSessionHttpClient {
+class URLSessionHttpClient: HTTPClient {
     private let session: URLSession
     
     init(session: URLSession = .shared) {
@@ -99,7 +99,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
     
     
     //MARK:  - Helpers
-    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> URLSessionHttpClient {
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> HTTPClient {
         let SUT = URLSessionHttpClient()
         trackMemoryLeaks(instance: SUT, file: file, line: line )
         return SUT
