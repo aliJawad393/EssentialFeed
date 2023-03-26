@@ -11,21 +11,8 @@ import EssentiaFeed
 final class EssentiaFeedAPIEndToEndTests: XCTestCase {
 
     func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
-        let client = URLSessionHttpClient()
-        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
-        let loader = RemoteFeedLoader(url: testServerURL, client: client)
         
-        let exp = expectation(description: "Wait for load completion")
-        var receivedResult: LoadFeedResult?
-        
-        loader.load { result in
-            receivedResult = result
-            exp.fulfill()
-        }
-        
-        wait(for: [exp], timeout: 20.0)
-        
-        switch receivedResult {
+        switch getFeedResult() {
         case .success(let items):
             XCTAssertEqual(items.count, 8, "Expected 8 items in the test account feed")
             XCTAssertEqual(items[0], expectedItem(at: 0))
@@ -46,6 +33,23 @@ final class EssentiaFeedAPIEndToEndTests: XCTestCase {
     }
     
     //MARK: - Helpers
+    private func getFeedResult() -> LoadFeedResult? {
+        let client = URLSessionHttpClient()
+        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
+        let loader = RemoteFeedLoader(url: testServerURL, client: client)
+        
+        let exp = expectation(description: "Wait for load completion")
+        var receivedResult: LoadFeedResult?
+        
+        loader.load { result in
+            receivedResult = result
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 20.0)
+        return receivedResult
+    }
+    
     private func expectedItem(at index: Int) -> FeedItem {
         FeedItem(id: id(at: index), description: description(at: index), location: location(at: index), imageURL: imageURL(at: index))
     }
